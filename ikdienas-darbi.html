@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8" />
+  <title>Darbplūsma | ChatGPT</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background-color: #2c2f36;
+      color: #e0e0e0;
+      display: flex;
+      height: 100vh;
+    }
+
+    aside {
+      width: 260px;
+      background-color: #202123;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    }
+
+    aside h1 {
+      font-size: 20px;
+      color: #10a37f;
+      margin-bottom: 20px;
+    }
+
+    aside ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    aside ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid #333;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 30px;
+      overflow-y: auto;
+    }
+
+    .message {
+      background-color: #3a3f47;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      max-width: 600px;
+    }
+
+    .message.user {
+      background-color: #444654;
+      align-self: flex-start;
+    }
+
+    .message.assistant {
+      background-color: #3a3f47;
+      align-self: flex-end;
+    }
+
+    .status {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <aside>
+    <h1>ChatGPT</h1>
+    <ul>
+      <li>Jauna tēma</li>
+      <li>Vēsturiskās sarunas</li>
+      <li>Darbplūsma</li>
+      <li>Iestatījumi</li>
+    </ul>
+  </aside>
+
+  <main>
+    <div class="message user">
+      <p><strong>Lietotājs:</strong> Atveru ChatGPT darbplūsmas kontroli.</p>
+    </div>
+    <div class="message assistant">
+      <p><strong>Sistēma:</strong> Aktivitāte tiek uzturēta... vari turpināt strādāt citā logā.</p>
+    </div>
+
+    <div class="status">
+      Šis logs simulē aktivitāti ik pēc 60 sek. – DeskTime uzskata, ka šī lapa ir aktīva.
+    </div>
+  </main>
+
+  <script>
+    setInterval(() => {
+      window.focus();
+      const evt = new KeyboardEvent('keydown', { key: 'Shift' });
+      document.dispatchEvent(evt);
+      console.log('Simulēta aktivitāte: Shift + fokusēts logs');
+    }, 60000);
+  </script>
+</body>
+</html>
